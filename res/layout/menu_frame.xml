@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="400px"
+	    android:layout_height="700px"
+	    android:orientation="vertical"
+	    android:background="@drawable/menu">
+	 	
+	    <ExpandableListView
+	        android:id="@+id/lvExp"
+	        android:layout_width="400px"
+	        android:layout_height="750px"
+	        android:cacheColorHint="#00000000" 
+	        android:paddingTop="150px"
+	        android:paddingLeft="8px"
+	        android:paddingRight="8px"/>
+		</LinearLayout>
