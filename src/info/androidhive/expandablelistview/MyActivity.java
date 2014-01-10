@@ -27,21 +27,23 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.widget.TextView;
 import android.support.v4.app.FragmentActivity;
+
 
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 
-public class MainActivity extends Activity {
+public class MyActivity extends Activity {
 
 	ExpandableListAdapter listAdapter;
 	ExpandableListView expListView;
 	List<String> listDataHeader;
 	HashMap<String, List<String>> listDataChild;
 	
-	private ImageView imgView;
+//	private ImageView imgView;
 	private TextView webviewNavi;
 	private WebView webView;
 
@@ -60,6 +62,14 @@ public class MainActivity extends Activity {
 		
 		setContentView(R.layout.activity_main);
 		
+		TextView logout = (TextView) findViewById(R.id.logout);
+		logout.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				finish();
+			}
+		});
+		
 		menu = new SlidingMenu(this);
 		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
 		menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
@@ -68,8 +78,8 @@ public class MainActivity extends Activity {
 		
 		
 		
-		imgView = (ImageView) findViewById(R.id.top);
-		imgView.setImageResource(R.drawable.top);
+//		imgView = (ImageView) findViewById(R.id.top);
+//		imgView.setImageResource(R.drawable.top);
 		
 
 		webviewNavi= (TextView)findViewById(R.id.textView1);
@@ -98,12 +108,12 @@ public class MainActivity extends Activity {
 					int groupPosition, int childPosition, long id) {
 
 				
-				webviewNavi.setText(listDataHeader.get(groupPosition)
-						+ " > "
-						+ listDataChild.get(
-								listDataHeader.get(groupPosition)).get(
-								childPosition));
-		
+//				webviewNavi.setText(listDataHeader.get(groupPosition)
+//						+ " > "
+//						+ listDataChild.get(
+//								listDataHeader.get(groupPosition)).get(
+//								childPosition));
+//		
 					switch(childPosition)
 					{
 					case 0:
@@ -133,51 +143,26 @@ public class MainActivity extends Activity {
 		listDataChild = new HashMap<String, List<String>>();
 
 		// Adding child data
-		listDataHeader.add("ÓÍ±Ã³µ");
-		listDataHeader.add("¿Õµ÷³µ");
-		listDataHeader.add("µçÔ´³µ");
-		listDataHeader.add("ÖÆÑõ³µ");
-		listDataHeader.add("ÖÆµª³µ");
-		listDataHeader.add("ÀäÆø³µ");
+		listDataHeader.add("æ²¹æ³µè½¦");
+		listDataHeader.add("ç©ºè°ƒè½¦");
+		
 
 		// Adding child data
 		List<String> car1 = new ArrayList<String>();
-		car1.add("DYC-1A");
+		
 		car1.add("DYC-5A");
 		car1.add("DYC-6A");
 
 
 		List<String> car2 = new ArrayList<String>();
-		car2.add("DYC-1A");
-		car2.add("DYC-5A");
-		car2.add("DYC-6A");
+		car2.add("DTCQ-4B");
+	
 
-		List<String> car3 = new ArrayList<String>();
-		car3.add("DYC-1A");
-		car3.add("DYC-5A");
-		car3.add("DYC-6A");
-		
-		List<String> car4 = new ArrayList<String>();
-		car4.add("DYC-1A");
-		car4.add("DYC-5A");
-		car4.add("DYC-6A");
-		
-		List<String> car5 = new ArrayList<String>();
-		car5.add("DYC-1A");
-		car5.add("DYC-5A");
-		car5.add("DYC-6A");
-		
-		List<String> car6 = new ArrayList<String>();
-		car6.add("DYC-1A");
-		car6.add("DYC-5A");
-		car6.add("DYC-6A");
+	
 
 		listDataChild.put(listDataHeader.get(0), car1); 
 		listDataChild.put(listDataHeader.get(1), car2);
-		listDataChild.put(listDataHeader.get(2), car3);
-		listDataChild.put(listDataHeader.get(3), car4);
-		listDataChild.put(listDataHeader.get(4), car5);
-		listDataChild.put(listDataHeader.get(5), car6);
+	
 	}
 	
 }
