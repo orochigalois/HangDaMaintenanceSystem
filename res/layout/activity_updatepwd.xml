@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+<AbsoluteLayout
+  
+   android:layout_width="1280px"
+	    android:layout_height="100px"
+   android:background="@drawable/top" >
+   
+    <TextView android:id="@+id/logout2" 
+		  		android:layout_width="wrap_content"
+		  		android:layout_height="wrap_content"
+		  
+		  		android:text="登出系统"
+		  		
+		  		android:textSize="22px"
+		  		android:textColor="#ffffff"
+		  		android:layout_x="1154px"
+      android:layout_y="35px"/>
+    </AbsoluteLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="修改密码"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/mypwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="密码"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/mypwd_again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="再次输入密码"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:maxLength="12" />
+
+
+
+    <LinearLayout
+        android:id="@+id/mypwd_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/mypwd_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:text="确定"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/mypwd_clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:text="清空"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+
+</LinearLayout>

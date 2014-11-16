@@ -1,52 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:android1="http://schemas.android.com/apk/res/android"
-    android:layout_width="1280px"
-    android:layout_height="800px"
-    android:background="#f4f4f4"
-    android:orientation="vertical" >
-<AbsoluteLayout
+
+  		
+  	
+  		<!-- Footer Ends -->
+  		<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
   
    android:layout_width="1280px"
-	    android:layout_height="100px"
-   android:background="@drawable/top" >
-   
-    <TextView android:id="@+id/logout" 
-		  		android:layout_width="wrap_content"
+	    android:layout_height="800px"
+   android:background="@drawable/login" >
+   <!--  Email Label -->
+		  <TextView android:layout_width="wrap_content"
 		  		android:layout_height="wrap_content"
+		  	
+		  		android:textColor="#372c24"
+		  		android:text="用户名"
+		  		android:layout_x="100px"
+      android:layout_y="490px"/>
+		  <EditText android:layout_width="200px"
+		  		android:layout_height="wrap_content"
+		  		android:layout_marginTop="5dip"
+		  		android:layout_marginBottom="20dip"
+		  		android:singleLine="true"
+		  		android:id="@+id/user"
+		  		android:layout_x="150px"
+      android:layout_y="480px"
+		  		/>
+		  <!--  Password Label -->
+		  <TextView android:layout_width="wrap_content"
+		  		android:layout_height="wrap_content"
+		  		android:textColor="#372c24"
+		  		android:text="密码"
+		  		android:layout_x="100px"
+      android:layout_y="570px"
+		  		/>
+		  <EditText android:layout_width="200px"
+		  		android:layout_height="wrap_content"
+		  		android:layout_marginTop="5dip"
+		  		android:singleLine="true"
+		  		android:password="true"
+		  		android:id="@+id/pwd"
+		  		android:layout_x="150px"
+      android:layout_y="560px"
+		  		/>
+		  <!-- Login button -->	
+		  <Button android:id="@+id/btnLogin" 
+		  		android:layout_width="120px"
+		  		android:layout_height="50px"
+		  		android:layout_marginTop="10dip"
+		  		android:text="登陆"
+		  		android:layout_x="100px"
+      android:layout_y="650px"
+		  		/>
 		  
-		  		android:text="登出系统"
-		  		
-		  		android:textSize="22px"
-		  		android:textColor="#ffffff"
-		  		android:layout_x="1154px"
-      android:layout_y="35px"/>
-    </AbsoluteLayout>
+		  <Button android:id="@+id/btnUpdatePWD" 
+		  		android:layout_width="120px"
+		  		android:layout_height="50px"
+		  		android:layout_marginTop="10dip"
+		  		android:text="修改密码"
+		  		android:layout_x="224px"
+      android:layout_y="650px"
+		  		/>
 
-		
-		<LinearLayout
-	    android:layout_width="1280px"
-	    android:layout_height="700px"
-	    android:orientation="vertical"
-	    >
-		    <TextView
-		        android:id="@+id/textView1"
-		        android:layout_width="1280px"
-		        android:layout_height="30px"
-		        android:textColor="#ffffff"
-		        android:background="#323232"
-			    android:textSize="22sp"
-			    android:textStyle="bold"
-		      
-		        android:textAppearance="?android:attr/textAppearanceMedium" />
-		    <WebView
-		    android:id="@+id/webView1"
-		    android:layout_width="1280px"
-		    android:layout_height="650px"/>
-    
 
+</AbsoluteLayout>
+
+  		
+  			
+  		
  
-		</LinearLayout>
-
-    
-</LinearLayout>
